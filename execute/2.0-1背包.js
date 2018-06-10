@@ -1,6 +1,6 @@
 /*
- * ��n����Ʒ��1������Ϊw�ı�����
- * ÿ����Ʒ��ֻ��һ������i����Ʒ������Ϊweight[i]����ֵΪvalue[i]����⽫��Щ��Ʒװ�뱳����ʹ��ֵ�ܺ����
+ * 有n件物品和1个容量为w的背包。
+ * 每种物品均只有一件，第i件物品的重量为weight[i]，价值为value[i]，求解将哪些物品装入背包可使价值总和最大。
  * */
 
 const keys = Object.keys
