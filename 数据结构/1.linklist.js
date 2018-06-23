@@ -1,10 +1,12 @@
+const { Link } = require('./common')
+
 class Node {
   constructor(data) {
     this.data = data
   }
 }
 
-class LinkList {
+class LinkList extends Link{
   append(data){
     const head = this.head
     const node = new Node(data)
@@ -24,14 +26,6 @@ class LinkList {
     const node = new Node(data)
     node.next = head
     this.head = node
-  }
-
-  forEach(fn) {
-    let current = this.head
-    while(current) {
-      fn(current.data)
-      current = current.next
-    }
   }
 
   remove(data) {
@@ -54,15 +48,4 @@ class LinkList {
   }
 }
 
-const linkList = new LinkList()
-linkList.append(1)
-linkList.append(2)
-linkList.prepend(3)
-linkList.prepend(4)
-linkList.forEach(console.log)
-
-linkList.remove(4)
-linkList.remove(3)
-
-linkList.forEach(console.log)
-
+module.exports = LinkList
