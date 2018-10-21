@@ -8,6 +8,13 @@ class Link {
   }
 }
 
+class Node {
+  constructor(data) {
+    this.data = data
+  }
+}
+
 module.exports = {
   Link,
+  Node,
 }

@@ -1,4 +1,4 @@
-const Stack = require('../3.stack')
+const Stack = require('../stack')
 
 const stack = new Stack()
 

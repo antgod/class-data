@@ -1,4 +1,4 @@
-const Queue = require('../2.queue')
+const Queue = require('../queue')
 
 const queue = new Queue()
 

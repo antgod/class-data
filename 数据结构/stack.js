@@ -1,10 +1,4 @@
-const { Link } = require('./common')
-
-class Node {
-  constructor(data) {
-    this.data = data
-  }
-}
+const { Link, Node } = require('./common')
 
 class Stack extends Link{
   push(data){
