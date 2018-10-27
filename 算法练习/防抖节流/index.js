@@ -2,6 +2,7 @@ const STEP = 250
 
 const partial = (fn, ...args) => () => fn(...args)
 
+// 防抖
 const debounce = (fn, delay = STEP, immediate) => {
   let timer
   return (...args) => {
@@ -13,6 +14,7 @@ const debounce = (fn, delay = STEP, immediate) => {
   }
 }
 
+// 节流
 const throttle = (fn, hold = STEP) => {
   let timer
   let last

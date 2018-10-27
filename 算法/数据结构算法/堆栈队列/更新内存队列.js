@@ -25,7 +25,7 @@ const randoms = (length, max) => range(length).map(() => random(max))
 const initialDS = (length, max = 100) => randoms(length, max)
 
 const DEFAULT_MAX = 10
-// 使用数据来模拟环形队列
+// 使用数组来模拟环形队列
 let arr = initialDS(DEFAULT_MAX)
 console.log('初始数据', arr)
 

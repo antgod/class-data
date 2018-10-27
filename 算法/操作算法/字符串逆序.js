@@ -1,13 +1,13 @@
 const string = 'abcefg' // => 'efgabc'
 
-const trans1 = (str, n) => [str.substr(0, n), str.substr(n, str.length -1)].reverse().join('')
+const trans1 = (str, n) => [str.substr(0, n), str.substr(n, str.length - 1)].reverse().join('')
 
 console.log(trans1(string, 3))
 
 const reverse = (chars, from, to) => {
   while (from < to) {
     var t = chars[from]
-    chars[from ++] = chars[to]
+    chars[from++] = chars[to]
     chars[to--] = t
   }
   return chars
@@ -21,7 +21,6 @@ const trans2 = (s, n, m) => {
 const s = string.split('')
 trans2(s, s.length, 3)
 console.log(s.join(''))
-
 
 const trans3 = (sentence) => {
   const s = sentence.split(' ')

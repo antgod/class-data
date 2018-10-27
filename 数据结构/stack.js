@@ -5,15 +5,16 @@ class Stack extends Link{
     const node = new Node(data)
     node.next = this.head
     this.head = node
+    
   }
 
   pop() {
-    if (this.head) {
-      return 
+    if (!this.head) {
+      return
     }
-    const data = this.head.data
+    const node = this.head
     this.head = this.head.next
-    return this.head
+    return node
   }
 
   isEmpty() {

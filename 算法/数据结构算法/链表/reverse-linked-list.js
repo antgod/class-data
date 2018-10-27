@@ -12,5 +12,6 @@ linkList.append(3)
 linkList.append(4)
 linkList.append(5)
 console.log(linkList.toString())
+
 linkList.reverseList()
 console.log(linkList.toString())

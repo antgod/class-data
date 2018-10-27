@@ -7,7 +7,7 @@ const numbers = [2, 7, 11, 15]
 const common = target => {
   for (let i = 0; i < numbers.length; i++) {
     for (let j = i + 1; j < numbers.length; j++) {
-      if (numbers[i] + numbers[j]=== target) {
+      if (numbers[i] + numbers[j] === target) {
         return [numbers[i], numbers[j]]
       }
     }
@@ -20,7 +20,7 @@ console.log(common(26))
 // 双指针
 
 const twoPoints = target => {
-  for (let i = 0, j = numbers.length - 1; i < j; ) {
+  for (let i = 0, j = numbers.length - 1; i < j;) {
     const result = numbers[i] + numbers[j]
     if (result < target) {
       i++

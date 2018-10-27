@@ -15,7 +15,7 @@ const parser = (input, sep = '.') => {
       return ret
     } else if (!isComplex && char !== sep) {                    // 如果是普通路径并且不是分隔符
       return last.concat(char)
-    } else if (isComplex && !/['"]/.test(char)) {   // 如果是特殊路径
+    } else if (isComplex && !/['"]/.test(char)) {               // 如果是特殊路径
       memory.push(char)
     }
     return last
