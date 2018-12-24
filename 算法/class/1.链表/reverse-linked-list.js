@@ -1,4 +1,4 @@
-const LinkList = require('../../数据结构/linklist')
+const LinkList = require('../../dataStructure/linklist')
 
 // head = 1-2-3-4-5-null
 // head = 5-4-3-2-1-null
