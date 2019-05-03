@@ -8,6 +8,9 @@ const StatckToQueue = () => {
   return {
     push: stack1.push.bind(stack1),
     pop: () => {
+      while(stack1.peek()) {
+        stack2.push(stack1.pop().data)
+      }
       stack2.pop()
     },
     peek: () => {
@@ -25,7 +28,7 @@ statckQueue.push(1)
 statckQueue.push(2)
 statckQueue.push(3)
 
-console.log(statckQueue.peek())
+// console.log(statckQueue.peek())
 
 statckQueue.pop()
 statckQueue.pop()
