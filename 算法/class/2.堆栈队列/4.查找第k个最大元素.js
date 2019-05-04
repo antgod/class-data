@@ -1,3 +1,5 @@
+// 需求：查找第k个最大元素
+
 // 方法1：保存k个元素，每次查找元素进行排序，时间复杂度n*log(n)
 // 方法2：队列头保持最小元素
 const Queue = require('../../../dataStructure/queue')
