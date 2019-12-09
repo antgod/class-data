@@ -9,7 +9,7 @@ const isAnagram1 = (str1, str2) => {
 
 console.log('isAnagram1:', isAnagram1(...arr))
 
-// 方法2：map存字母个数，map操作和获取都是O(1)
+// 方法2：map存字母个数，map操作和获取都是O(n )
 const isAnagram2 = (str1, str2) => {
 	const isMapEqual = (map1, map2) => {
 		return Object.keys(map1).length === Object.keys(map2).length && Object.keys(map1).every(key => map1[key] === map2[key])
