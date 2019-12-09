@@ -1,5 +1,4 @@
 const { Link, Node } = require('./common')
-
 class Stack extends Link{
   push(data){
     const node = new Node(data)
