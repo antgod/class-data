@@ -2,7 +2,7 @@
 
 // 方法1：保存k个元素，每次查找元素进行排序，时间复杂度n*log(n)
 // 方法2：队列头保持最小元素
-const Queue = require('../../数据结构/queue')
+const Queue = require('../../utils/queue')
 const arr = [4, 3, 5]
 
 const findKCountMax = (arr, k) => {

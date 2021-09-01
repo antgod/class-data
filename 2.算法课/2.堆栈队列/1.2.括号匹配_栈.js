@@ -1,5 +1,5 @@
 // 给定一个括号表达式，只有[]和()，判断表达式括号是否平衡，比如[(())]返回true,[()(()])不平衡
-const Stack = require('../../../dataStructure/stack')
+const Stack = require('../../utils/stack')
 const { keys, values } = Object
 
 const pattern = {
@@ -25,4 +25,4 @@ const isValid = (str) => {
 }
 
 const str = '{([33z]ff)q[(1)]}'
-console.log('isValid(str) :', isValid(str));
+console.log(str, isValid(str));

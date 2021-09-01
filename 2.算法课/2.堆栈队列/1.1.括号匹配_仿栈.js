@@ -1,5 +1,4 @@
 // 1. 给定一个括号表达式，只有[]和()，判断表达式括号是否平衡，比如[(())]返回true,[()(()])不平衡
-
 const signs = {'[': ']', ']': '[', '(': ')', ')': '(' }
 const keys = Object.keys
 
@@ -21,5 +20,5 @@ function parse (str) {
   return !stack.length
 }
 
-console.log(parse('[(a(1,2,4)3)]'))
-console.log(parse('[(a(1,2,4)3)]('))
+console.log('[(a(1,2,4)3)]', parse('[(a(1,2,4)3)]'))
+console.log('[(a(1,2,4)3)](', parse('[(a(1,2,4)3)]('))

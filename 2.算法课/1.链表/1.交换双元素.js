@@ -1,4 +1,4 @@
-const LinkList = require('../../dataStructure/linklist')
+const LinkList = require('../../utils/linklist')
 
 const linkList = new LinkList()
 linkList.append(1)

@@ -1,4 +1,4 @@
-const Stack = require('../../../dataStructure/stack')
+const Stack = require('../../utils/stack')
 
 // 用栈实现队列。当队列push时调用栈push，队列查询时候，把栈1的内容移动到栈2
 const StatckToQueue = () => {

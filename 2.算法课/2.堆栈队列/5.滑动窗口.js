@@ -1,4 +1,4 @@
-// const Queue = require('../../../dataStructure/queue')
+// const Queue = require('../../../utils/queue')
 
 // 需求：给定一组数组和一个滑块，滑块的长度可自定义调节。滑块从数组位置0一直移动到数组尾部，每次移动一个位置。
 // 求滑块每个位置包含数组的最大值

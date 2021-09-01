@@ -1,1 +1,0 @@
-// Given s = "leetcode", return "leotcede".
