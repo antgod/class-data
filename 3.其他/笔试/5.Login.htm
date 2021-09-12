@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  label {
+    display: inline-block;
+    text-align: right;
+    width: 100px;
+  }
+</style>
+<body>
+  <form onsubmit="onSubmit">
+    <p>
+      <label>用户名:</label>
+      <input type="input" name="userName" id="userName" />
+    </p>
+    <p>
+      <label>密码:</label>
+      <input type="password" name="userPass" id="userPass" /><br />
+    </p>
+    <p>
+      <label></label>
+      <input type="submit" value="提交" /><br />
+    </p>
+  </form>
+</body>
+<script>
+  const onSubmit = debance(() => {
+    // 伪码
+    // 获取用户名、密码
+    const userName = document.getElementById('userName');
+    const userPass = document.getElementById('userPass');
+
+    const nameReg = /\w+/; // 伪码
+    const passReg = /\w+/; // 伪码
+
+    if (!nameReg.test(userName) || !passReg.test(userPass)) {
+      alert('请输入正确格式的用户名和密码');
+      return
+    }
+
+    // 伪码
+    const { publicKey } = getKeys();
+    // 加密用户密码
+    const userPassToken = encrypt(userPass, { publicKey })
+
+    // 如果3次失败，前端提示失败
+    // 传输服务端
+    const result = ajax({
+      url, // 单点登录API
+      data: encodeURIComponent(JSON.stringify({ // 防止xss注入
+        userName,
+        userPassToken,
+      })),
+    }).then(result => {
+
+      if (result.success) {
+        const { data = {} } = result;
+        const { token } = data;
+        // 视情况而定写入cookie或者sessionStorage，如果每次启动浏览器都要登录写入sessionStorage，如果清除cookie才登录则写入cookie
+        writeToken(token);
+        window.location.href = getQueryString('goto') || dispatchRedirect()
+      } else {
+        log('失败信息')
+        alert(result.message);
+      }
+    });
+  });
+
+  // 服务端代码
+  /*
+   *   public void ssoLogin () {
+      // 校验refer,sessionId，防止csrf钓鱼攻击
+      // 解密用户密码
+      // 校验用户名密码，校验失败，打印日志
+      // 策略1：验证当前账户是否已经登录，如果是，返回错误 策略2：无此步骤
+      // 返回登录信息以及token
+   }
+  */
+</script>
+</html>
