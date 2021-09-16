@@ -21,10 +21,4 @@ const tree = new TreeNode(json);
 
 
 
-const p1 = TreeNode.findParent(tree, 5, 0);
-// const p2 = tree.findParent1(3, 2);
-// const p3 = tree.findParent1(2, 8);
-// const p4 = tree.findParent1(7, 9);
-// const p5 = tree.findParent1(7, 3);
-
-console.log('parent :>> ', p1);
+tree.map(item => console.log(item.val))
