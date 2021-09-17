@@ -1,0 +1,17 @@
+// 股票的每个时间点都是变化的，数组的每一项就是每个时间点的股票价格。求如何买卖才能赚到最多。
+const greedy = (array) => {
+  let last;
+  return array.reduce((money, item) => {
+    if (last && item > last) {
+      const finalMoney = money + item - last;
+      last = item;
+      return finalMoney;
+    }
+    last = item;
+    return money;
+  }, 0);
+}
+
+console.log(greedy([7, 1, 5, 3, 6, 4]));
+console.log(greedy([1, 2, 3, 4, 5]));
+console.log(greedy([5, 4, 3, 2, 1]));
